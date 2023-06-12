@@ -5,5 +5,5 @@ import com.margin.domain.employee.Employee
 interface MarginSpi {
     fun getMargin(yearsOfExperience: Int): Int
 
-    fun getExcessMargin(employee: Employee): Int
+    fun getExcessMargin(employee: Employee, margin: Int): Int
 }

@@ -7,9 +7,10 @@ import com.margin.domain.margin.MarginSpi
 class MarginAdapter: MarginSpi {
     override fun getMargin(yearsOfExperience: Int): Int {
         TODO("Not yet implemented")
+        // Mettre en base la marge par années d'expérience
     }
 
-    override fun getExcessMargin(employee: Employee): Int {
+    override fun getExcessMargin(employee: Employee, margin: Int): Int {
         TODO("Not yet implemented")
         // Calcul TJM x NbJ - (SBA * 1,5 + marge)
     }

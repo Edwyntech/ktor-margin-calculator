@@ -4,6 +4,5 @@ data class Employee(
     val annualGrossSalary: Int,
     val averageDailyRate: Int,
     val numberOfWorkingDays: Int,
-    val yearsOfExperience: Int,
-    val margin: Int
+    val yearsOfExperience: Int
 )
