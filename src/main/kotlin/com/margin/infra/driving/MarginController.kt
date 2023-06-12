@@ -5,14 +5,14 @@ import com.margin.infra.driven.MarginAdapter
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 
-class EmployeeMarginController: KoinComponent {
+class MarginController: KoinComponent {
     private val marginAdapter: MarginAdapter by inject()
 
     fun getMarginFromYearsOfExperience(years: Int): Int {
         return marginAdapter.getMargin(years)
     }
 
-    fun getExecedentMargin(employee: Employee): Int {
-        return employee.annualGrossSalary
+    fun getExcessMargin(employee: Employee, margin: Int): Int {
+        return marginAdapter.getExcessMargin(employee, margin)
     }
 }
