@@ -16,9 +16,9 @@ fun Application.configureRouting() {
         }
         post("/margin") {
             val employee = call.receive<Employee>()
-            val margin = marginService.getMarginFromYearsOfExperience(employee.yearsOfExperience)
+            val margin = marginService.getMarginFromSeniority(employee.seniority)
             val excessMargin = marginService.getExcessMargin(employee, margin)
-            call.respondText(excessMargin.toString())
+            call.respond(excessMargin)
         }
     }
 }

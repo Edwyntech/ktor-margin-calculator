@@ -9,7 +9,7 @@ import org.koin.core.component.inject
 class MarginService: KoinComponent, MarginHandlerApi {
     private val marginAdapter: MarginAdapter by inject()
 
-    override fun getMarginFromYearsOfExperience(years: Int): Int {
+    override fun getMarginFromSeniority(years: Int): Int {
         return marginAdapter.getMargin(years)
     }
 
