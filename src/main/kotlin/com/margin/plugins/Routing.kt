@@ -20,5 +20,11 @@ fun Application.configureRouting() {
             val excessMargin = marginService.getExcessMargin(employee, margin)
             call.respond(excessMargin)
         }
+        post("/minimum-working-days") {
+            val employee = call.receive<Employee>()
+            val margin = marginService.getMarginFromSeniority(employee.seniority)
+            val minimumWorkingDays = marginService.getMinimumNumberOfWorkingDays(employee, margin)
+            call.respond(minimumWorkingDays)
+        }
     }
 }

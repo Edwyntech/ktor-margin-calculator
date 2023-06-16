@@ -6,4 +6,6 @@ interface MarginHandlerApi {
     fun getMarginFromSeniority(years: Int): Int
 
     fun getExcessMargin(employee: Employee, margin: Int): Int
+
+    fun getMinimumNumberOfWorkingDays(employee: Employee, margin: Int): Int
 }

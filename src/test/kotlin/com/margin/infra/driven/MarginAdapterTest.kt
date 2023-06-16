@@ -59,4 +59,18 @@ private val marginAdapter = MarginAdapter()
         val actual = marginAdapter.getExcessMargin(employee, margin)
         assertEquals(expected, actual)
     }
+
+    @Test
+    fun shouldReturnMinimumNumberOfWorkingDaysForExcessMargin(){
+        val employee = Employee(
+            annualGrossSalary = 54000,
+            averageDailyRate = 600,
+            numberOfWorkingDays = 0,
+            seniority = 1
+        )
+        val margin = marginAdapter.getMargin(employee.seniority)
+        val expected = 186
+        val actual = marginAdapter.getMinimumNumberOfWorkingDaysForExcessMargin(employee, margin)
+        assertEquals(expected, actual)
+    }
 }

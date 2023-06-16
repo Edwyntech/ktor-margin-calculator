@@ -16,4 +16,10 @@ class MarginService: KoinComponent, MarginHandlerApi {
     override fun getExcessMargin(employee: Employee, margin: Int): Int {
         return marginAdapter.getExcessMargin(employee, margin)
     }
+
+    override fun getMinimumNumberOfWorkingDays(employee: Employee, margin: Int): Int {
+        return marginAdapter.getMinimumNumberOfWorkingDaysForExcessMargin(employee, margin)
+    }
+
+
 }
